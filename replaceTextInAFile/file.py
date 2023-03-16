@@ -1,17 +1,14 @@
 try:
-    filename = input("get the file")
-    inContent = open(filename, 'r')
-    outfilename = input("enter output filename")
-    outContent = open(outfilename, 'w')
+    inFilename = input("enter input file")
+    inContent = open(inFilename, 'r')
+    outFilename = input("enter output filename")
+    outContent = open(outFilename, 'w')
 except:
     print("the file doesn't exit")
 else:
-    #content = open(filename, 'r')
-    findtext = input("enter the first value")
-    replacetext = input("enter the second value")
+    findText = input("enter the text to be replaced")
+    replaceText = input("enter the replacement text")
     lines = inContent.readlines()
     for line in lines:
-       #print(line)
-       text = (line.replace(findtext, replacetext))
+       text = (line.replace(findText, replaceText))
        outContent.write(text)
-
